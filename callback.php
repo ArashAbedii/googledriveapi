@@ -1,5 +1,10 @@
 <?php
 
-if(!empty($_GET['code'])){
-    file_put_contents('code.txt',$_GET['code']);
+if(empty($_GET['code'])){
+    return 'code required!';
 }
+
+require 'Server.php';
+require 'Drive.php';
+
+echo Drive::getAccessToken($_GET['code']);

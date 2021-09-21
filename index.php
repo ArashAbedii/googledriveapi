@@ -1,10 +1,9 @@
 <?php
-include 'Drive.php';
 
-//Drive::getCode(CLIENT_ID,REDIRECT_URI,'https://www.googleapis.com/auth/drive.file','code',['access_type'=>'offline']);
-//echo Drive::getAccessToken(CLIENT_ID,CLIENT_SECRET,file_get_contents('code.txt'),REDIRECT_URI);
-//echo Drive::refreshToken(CLIENT_ID,CLIENT_SECRET,REFRESH_TOKEN);
-//echo Drive::getAccessTokenSimply();
-//Drive::simpleUpload('https://irsv.upmusics.com/99/Armin%20Vigen%20%7C%20Pashimoon%20(128).mp3?_ga=2.29221692.148825670.1631424076-2052873322.1631424076');
-//Drive::downloadFile('1oa82caoXouUn6OLxH5LkzQnjXCKTPSD7');
-//Drive::makePermissianFile('reader','anyone','1CLyvNWDTVNy1UKUaPNxMEY9TQ7GrlhVG');
+require 'Server.php';
+require 'Drive.php';
+
+//echo Drive::getCode();
+//echo Drive::simpleUpload('http://dl.mokhtalefmusic.com/Music/1395/02/25/Shahrum%20Kashani%20-%20Ye%20Lahze%20(128).mp3',Drive::generateAuth());
+//Drive::revoke('ya29.a0ARrdaM9T187KDimBjNXkJoKpLsEMkt1oQegsdOUo7ya4nbKKNJZYsWo9Iw2oEd4Z_Pfr2hpCq9z5muvBOBvI-g3qpmacq4SApj8lIXdqKb4NPcISdTKAf5GinlKwk7OckMqL0QiXdcHD0iiHwmxVb0wiVP3sPA');
+var_dump(Drive::resumableUpload('http://dl.mokhtalefmusic.com/Music/1395/02/25/Shahrum%20Kashani%20-%20Ye%20Lahze%20(128).mp3','my.mp3'));
