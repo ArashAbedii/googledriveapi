@@ -4,9 +4,9 @@ use Server;
 
 class Drive {
 
-    public static $clientId='1012604247986-7mmsi3hf2kojed8s21mapfst7afhj21g.apps.googleusercontent.com';
-    public static $clientSecret='0S9jUf6i3ahuHz5rbO3dttTT';
-    public static $redirectUri='http://localhost:8000/callback.php';
+    public static $clientId='#';
+    public static $clientSecret='#';
+    public static $redirectUri='#';
     
 
     public static function getCode($scope='https://www.googleapis.com/auth/drive.file',array $options=[]){
